@@ -12,8 +12,8 @@ GroupForm::GroupForm(MainWindow *parent) :
 {
 	ui->setupUi(this);
 
-	ui->groupTableWidget->setColumnCount(1);
-	ui->groupTableWidget->setRowCount(1);
+	ui->groupTableWidget->setColumnCount(ui->lengthSpin->minimum());
+	ui->groupTableWidget->setRowCount(ui->widthSpin->minimum());
 	ui->groupTableWidget->verticalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 	ui->groupTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 

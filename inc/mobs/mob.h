@@ -28,7 +28,7 @@ class Mob : public Serializable {
 		virtual ~Mob();
 
 		MobSkills *calculateSkills(int level);
-		int calculateSkill(int maxSkill, int minSkill);
+		float calculateSkill(float maxSkill, float minSkill);
 
 		QString display();
 		QString displayMainInfo();

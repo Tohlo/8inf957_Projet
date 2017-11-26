@@ -36,6 +36,8 @@ class GroupForm : public QDialog
 
 		void on_groupTableWidget_cellClicked(int row, int column);
 
+		void on_quitButton_clicked();
+
 	private:
 		Ui::GroupForm *ui;
 		QBrush color;

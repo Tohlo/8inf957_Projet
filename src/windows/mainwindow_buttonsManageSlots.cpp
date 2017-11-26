@@ -41,6 +41,8 @@ void MainWindow::resetMapEditor() {
 
 	ui->widthSpin->setValue(ui->widthSpin->minimum());
 	ui->lengthSpin->setValue(ui->lengthSpin->minimum());
+
+	ui->exportButton->setEnabled(false);
 }
 /** Fin reset **/
 
@@ -171,8 +173,11 @@ std::vector<Mob *> MainWindow::deserializeMobs(QString type, int level)
 			mob->read(loadDoc.object());
 			file.close();
 
-			if (mob->getMinSkills()->getLevel() <= level && mob->getMaxSkills()->getLevel() >= level) {
-				mobs.push_back(mob);
+			for (int i = mob->getMinSkills()->getLevel(); i <= mob->getMaxSkills()->getLevel(); ++i) {
+				if (std::abs(level - i) <= 2) {
+					mobs.push_back(mob);
+					break;
+				}
 			}
 		}
 	}
@@ -264,6 +269,11 @@ void MainWindow::on_actionSettings_triggered()
 	window->move(QPoint((QApplication::desktop()->width() - window->width())/2, (QApplication::desktop()->height() - window->height())/2));
 	window->show();
 }
+
+void GroupForm::on_quitButton_clicked()
+{
+	this->close();
+}
 /** Fin changement de page **/
 
 /** Formulaires et génération **/
@@ -304,7 +314,7 @@ void MainWindow::on_changeAttackButton_clicked()
 
 void MainWindow::on_generateButton_clicked()
 {
-	resetMapEditor();
+	ui->mapTableWidget->clear();
 
 	Map *map = new Map(deserializeGroups(ui->widthSpin->value(), ui->lengthSpin->value()), ui->widthSpin->value(), ui->lengthSpin->value(), ui->groupBox->value());
 
@@ -321,7 +331,8 @@ void MainWindow::on_generateButton_clicked()
 	if (!mobs.empty()) {
 		for (int i=0; i < ui->monsterNumberSpin->value(); ++i) {
 			Mob *mob = new Mob(*mobs[rand() % mobs.size()]);
-			mob->setCurrentSkills(mob->calculateSkills(std::max(1, ui->battleLevelSpin->value() - 2 + rand()%5)));
+			int level = std::max(mob->getMinSkills()->getLevel(), std::min(mob->getMaxSkills()->getLevel(), ui->battleLevelSpin->value() - 2 + rand()%5));
+			mob->setCurrentSkills(mob->calculateSkills(level));
 
 			int row;
 			int column;
@@ -394,7 +405,7 @@ void MainWindow::on_saveButton_clicked()
 	if (!file.fileName().isEmpty()) {
 		/** Création minSkills **/
 		MobSkills *minSkills = new MobSkills();
-		minSkills->setLevel(ui->levelSpinMax->value());
+		minSkills->setLevel(ui->levelSpinMin->value());
 		minSkills->setHp(ui->hpSpinMin->value());
 		minSkills->setPA(ui->paSpinMin->value());
 		minSkills->setPM(ui->pmSpinMin->value());

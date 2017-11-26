@@ -23,6 +23,14 @@ Mob::~Mob()
 
 MobSkills *Mob::calculateSkills(int level)
 {
+	if (level == minSkills->getLevel()) {
+		return minSkills;
+	}
+
+	if (level == maxSkills->getLevel()) {
+		return maxSkills;
+	}
+
 	MobSkills *newSkills = new MobSkills;
 	newSkills->setLevel(level);
 	newSkills->setHp(calculateSkill(maxSkills->getHp(), minSkills->getHp()) * level);
@@ -51,8 +59,8 @@ MobSkills *Mob::calculateSkills(int level)
 	return newSkills;
 }
 
-int Mob::calculateSkill(int maxSkill, int minSkill) {
-	return (maxSkill - minSkill) / (1  + maxSkills->getLevel() - minSkills->getLevel());
+float Mob::calculateSkill(float maxSkill, float minSkill) {
+	return (maxSkill - minSkill) / (maxSkills->getLevel() - minSkills->getLevel());
 }
 
 QString Mob::display()
