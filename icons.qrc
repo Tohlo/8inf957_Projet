@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/">
+        <file>assets/icons/skills/air.png</file>
+        <file>assets/icons/skills/ap.png</file>
+        <file>assets/icons/skills/ap_removal.png</file>
+        <file>assets/icons/skills/area_mastery.png</file>
+        <file>assets/icons/skills/armor.png</file>
+        <file>assets/icons/skills/block.png</file>
+        <file>assets/icons/skills/ch.png</file>
+        <file>assets/icons/skills/crit_mastery.png</file>
+        <file>assets/icons/skills/crit_resist.png</file>
+        <file>assets/icons/skills/damage_dealt.png</file>
+        <file>assets/icons/skills/distance_mastery.png</file>
+        <file>assets/icons/skills/dodge.png</file>
+        <file>assets/icons/skills/earth.png</file>
+        <file>assets/icons/skills/fire.png</file>
+        <file>assets/icons/skills/heals.png</file>
+        <file>assets/icons/skills/hp.png</file>
+        <file>assets/icons/skills/initiative.png</file>
+        <file>assets/icons/skills/lock.png</file>
+        <file>assets/icons/skills/mastery.png</file>
+        <file>assets/icons/skills/melee_mastery.png</file>
+        <file>assets/icons/skills/mp.png</file>
+        <file>assets/icons/skills/mp_removal.png</file>
+        <file>assets/icons/skills/prospecting.png</file>
+        <file>assets/icons/skills/range.png</file>
+        <file>assets/icons/skills/st_mastery.png</file>
+        <file>assets/icons/skills/water.png</file>
+        <file>assets/icons/skills/wisdom.png</file>
+        <file>assets/icons/others/folder-search.png</file>
+        <file alias="obstacle">assets/icons/others/blockPath.png</file>
+        <file>assets/icons/skills/control.png</file>
+    </qresource>
+</RCC>
