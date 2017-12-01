@@ -6,18 +6,18 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1167</width>
-    <height>717</height>
+    <width>1369</width>
+    <height>815</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>400</width>
+    <width>1167</width>
     <height>380</height>
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Battle generator</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="minimumSize">
@@ -33,7 +33,7 @@
     <item row="0" column="0">
      <widget class="QStackedWidget" name="stackedWidget">
       <property name="currentIndex">
-       <number>2</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="homepage">
        <layout class="QGridLayout" name="gridLayout">
@@ -233,7 +233,7 @@
            <enum>QTabWidget::Triangular</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="tabBarAutoHide">
            <bool>false</bool>
@@ -300,19 +300,63 @@
               </property>
               <layout class="QHBoxLayout" name="horizontalLayout_19">
                <item>
+                <spacer name="nameSpacer_3">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
                 <widget class="QLabel" name="nameLabel">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="text">
                   <string>Nom</string>
                  </property>
                 </widget>
                </item>
                <item>
-                <widget class="QLineEdit" name="nameLineEdit"/>
+                <widget class="QLineEdit" name="nameLineEdit">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>250</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="nameSpacer_2">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -324,6 +368,18 @@
                </item>
                <item>
                 <widget class="QLabel" name="typeLabel">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>100</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="text">
                   <string>Type</string>
                  </property>
@@ -331,15 +387,30 @@
                </item>
                <item>
                 <widget class="QComboBox" name="typeComboBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>250</width>
+                   <height>0</height>
+                  </size>
+                 </property>
                  <property name="editable">
                   <bool>true</bool>
                  </property>
                 </widget>
                </item>
                <item>
-                <spacer name="nameSpacer">
+                <spacer name="nameSpacer_7">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Expanding</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -362,44 +433,60 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>960</width>
-                 <height>882</height>
+                 <width>1272</width>
+                 <height>900</height>
                 </rect>
                </property>
                <layout class="QGridLayout" name="gridLayout_6">
-                <item row="3" column="0">
+                <item row="5" column="1">
                  <widget class="QGroupBox" name="battleBox">
                   <property name="title">
                    <string>Combat</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_5">
-                   <item row="0" column="1">
-                    <widget class="QGroupBox" name="paradeBox">
+                   <item row="2" column="0">
+                    <widget class="QGroupBox" name="dodgeBox">
                      <property name="title">
                       <string/>
                      </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_17">
+                     <layout class="QHBoxLayout" name="horizontalLayout_26">
                       <item>
-                       <widget class="QLabel" name="paradeIcon">
+                       <widget class="QLabel" name="dodgeIcon">
                         <property name="text">
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/dodge.png</pixmap>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="paradeLabel">
+                       <widget class="QLabel" name="dodgeLabel">
                         <property name="text">
-                         <string>Parade</string>
+                         <string>Esquive</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="paradeSpinMin">
+                       <spacer name="horizontalSpacer_123">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="dodgeSpinMin">
                         <property name="suffix">
-                         <string>%</string>
+                         <string/>
                         </property>
                         <property name="maximum">
                          <number>99999</number>
@@ -410,9 +497,22 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="paradeSpinMax">
+                       <widget class="QLabel" name="label_26">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="dodgeSpinMax">
                         <property name="suffix">
-                         <string>%</string>
+                         <string/>
                         </property>
                         <property name="maximum">
                          <number>99999</number>
@@ -449,6 +549,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_117">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="criticalSpinMin">
                         <property name="suffix">
                          <string>%</string>
@@ -458,6 +574,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_19">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -477,111 +606,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="2" column="1">
-                    <widget class="QGroupBox" name="tackleBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_25">
-                      <item>
-                       <widget class="QLabel" name="tackleIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/lock.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="tackleLabel">
-                        <property name="text">
-                         <string>Tacle</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="tackleSpinMin">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="tackleSpinMax">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="2" column="0">
-                    <widget class="QGroupBox" name="dodgeBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_26">
-                      <item>
-                       <widget class="QLabel" name="dodgeIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/dodge.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="dodgeLabel">
-                        <property name="text">
-                         <string>Esquive</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="dodgeSpinMin">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="dodgeSpinMax">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
+                   <item row="1" column="2">
                     <widget class="QGroupBox" name="poBox">
                      <property name="title">
                       <string/>
@@ -605,6 +630,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_119">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="poSpinMin">
                         <property name="suffix">
                          <string/>
@@ -614,6 +655,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_21">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -657,6 +711,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_118">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="initiativeSpinMin">
                         <property name="suffix">
                          <string/>
@@ -666,6 +736,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_20">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -685,7 +768,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="3" column="1">
+                   <item row="3" column="2">
                     <widget class="QGroupBox" name="controlBox">
                      <property name="title">
                       <string/>
@@ -709,6 +792,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_122">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="controlSpinMin">
                         <property name="suffix">
                          <string/>
@@ -718,6 +817,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_24">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -758,6 +870,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_124">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="willSpinMin">
                         <property name="suffix">
                          <string/>
@@ -767,6 +895,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_25">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -786,220 +927,47 @@
                      </layout>
                     </widget>
                    </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="1" column="0">
-                 <widget class="QGroupBox" name="baseBox">
-                  <property name="title">
-                   <string/>
-                  </property>
-                  <layout class="QHBoxLayout" name="horizontalLayout_10">
-                   <item>
-                    <widget class="QGroupBox" name="levelBox">
+                   <item row="2" column="2">
+                    <widget class="QGroupBox" name="tackleBox">
                      <property name="title">
                       <string/>
                      </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_20">
+                     <layout class="QHBoxLayout" name="horizontalLayout_25">
                       <item>
-                       <widget class="QLabel" name="levelLabel">
-                        <property name="text">
-                         <string>Niveau</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="levelSpinMin">
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="levelSpinMax">
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QGroupBox" name="hpBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_11">
-                      <item>
-                       <widget class="QLabel" name="hpIcon">
+                       <widget class="QLabel" name="tackleIcon">
                         <property name="text">
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/hp.png</pixmap>
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/lock.png</pixmap>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="hpLabel">
+                       <widget class="QLabel" name="tackleLabel">
                         <property name="text">
-                         <string>Vie</string>
+                         <string>Tacle</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="hpSpinMin">
-                        <property name="maximum">
-                         <number>99999</number>
+                       <spacer name="horizontalSpacer_121">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
                         </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="hpSpinMax">
-                        <property name="maximum">
-                         <number>99999</number>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
                         </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QGroupBox" name="paBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_12">
-                      <item>
-                       <widget class="QLabel" name="paIcon">
-                        <property name="text">
-                         <string/>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
                         </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/ap.png</pixmap>
-                        </property>
-                       </widget>
+                       </spacer>
                       </item>
                       <item>
-                       <widget class="QLabel" name="paLabel">
-                        <property name="text">
-                         <string>PA</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="paSpinMin">
-                        <property name="maximum">
-                         <number>99</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="paSpinMax">
-                        <property name="maximum">
-                         <number>99</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QGroupBox" name="pmBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_13">
-                      <item>
-                       <widget class="QLabel" name="pmIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mp.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="pmLabel">
-                        <property name="text">
-                         <string>PM</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="pmSpinMin"/>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="pmSpinMax"/>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QGroupBox" name="pcBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_14">
-                      <item>
-                       <widget class="QLabel" name="pcIcon">
-                        <property name="text">
-                         <string>TextLabel</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="pcLabel">
-                        <property name="text">
-                         <string>PC</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="pcSpinMin"/>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="pcSpinMax"/>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <widget class="QGroupBox" name="secondaryBox">
-                  <property name="title">
-                   <string>Secondaire</string>
-                  </property>
-                  <layout class="QGridLayout" name="gridLayout_7">
-                   <item row="1" column="0">
-                    <widget class="QGroupBox" name="criticalMasteryBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_32">
-                      <item>
-                       <widget class="QLabel" name="criticalMasteryIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/crit_mastery.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="criticalMasteryLabel">
-                        <property name="text">
-                         <string>Maîtrise Critique</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="criticalMasterySpinMin">
+                       <widget class="QSpinBox" name="tackleSpinMin">
                         <property name="suffix">
                          <string/>
                         </property>
@@ -1012,7 +980,255 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="criticalMasterySpinMax">
+                       <widget class="QLabel" name="label_23">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="tackleSpinMax">
+                        <property name="suffix">
+                         <string/>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QGroupBox" name="paradeBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_17">
+                      <item>
+                       <widget class="QLabel" name="paradeIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="paradeLabel">
+                        <property name="text">
+                         <string>Parade</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_120">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="paradeSpinMin">
+                        <property name="suffix">
+                         <string>%</string>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_22">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="paradeSpinMax">
+                        <property name="suffix">
+                         <string>%</string>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_95">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_83">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="1">
+                    <spacer name="horizontalSpacer_87">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="2" column="1">
+                    <spacer name="horizontalSpacer_88">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="7" column="1">
+                 <widget class="QGroupBox" name="secondaryBox">
+                  <property name="title">
+                   <string>Secondaire</string>
+                  </property>
+                  <layout class="QGridLayout" name="gridLayout_7">
+                   <item row="3" column="0">
+                    <widget class="QGroupBox" name="singleMasteryBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_31">
+                      <item>
+                       <widget class="QLabel" name="singleMasteryIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/st_mastery.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="singleMasteryLabel">
+                        <property name="text">
+                         <string>Maîtrise Monocible</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_130">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="singleMasterySpinMin">
+                        <property name="suffix">
+                         <string/>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_29">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="singleMasterySpinMax">
                         <property name="suffix">
                          <string/>
                         </property>
@@ -1051,6 +1267,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_126">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="meleeMasterySpinMin">
                         <property name="suffix">
                          <string/>
@@ -1060,6 +1292,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_28">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1079,7 +1324,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="2" column="1">
+                   <item row="2" column="2">
                     <widget class="QGroupBox" name="distanceMasteryBox">
                      <property name="title">
                       <string/>
@@ -1103,6 +1348,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_128">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="distanceMasterySpinMin">
                         <property name="suffix">
                          <string/>
@@ -1112,6 +1373,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_32">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1131,59 +1405,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="3" column="1">
-                    <widget class="QGroupBox" name="areaMasteryBox">
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_30">
-                      <item>
-                       <widget class="QLabel" name="areaMasteryIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/area_mastery.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="areaMasteryLabel">
-                        <property name="text">
-                         <string>Maîtrise Zone</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="areaMasterySpinMin">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="areaMasterySpinMax">
-                        <property name="suffix">
-                         <string/>
-                        </property>
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                        <property name="singleStep">
-                         <number>1</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
+                   <item row="1" column="2">
                     <widget class="QGroupBox" name="criticalBlockBox">
                      <property name="title">
                       <string/>
@@ -1207,6 +1429,22 @@
                        </widget>
                       </item>
                       <item>
+                       <spacer name="horizontalSpacer_127">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
                        <widget class="QSpinBox" name="criticalBlockSpinMin">
                         <property name="suffix">
                          <string/>
@@ -1216,6 +1454,19 @@
                         </property>
                         <property name="singleStep">
                          <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_33">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1235,31 +1486,47 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="3" column="0">
-                    <widget class="QGroupBox" name="singleMasteryBox">
+                   <item row="3" column="2">
+                    <widget class="QGroupBox" name="areaMasteryBox">
                      <property name="title">
                       <string/>
                      </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_31">
+                     <layout class="QHBoxLayout" name="horizontalLayout_30">
                       <item>
-                       <widget class="QLabel" name="singleMasteryIcon">
+                       <widget class="QLabel" name="areaMasteryIcon">
                         <property name="text">
                          <string/>
                         </property>
                         <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/st_mastery.png</pixmap>
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/area_mastery.png</pixmap>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QLabel" name="singleMasteryLabel">
+                       <widget class="QLabel" name="areaMasteryLabel">
                         <property name="text">
-                         <string>Maîtrise Monocible</string>
+                         <string>Maîtrise Zone</string>
                         </property>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="singleMasterySpinMin">
+                       <spacer name="horizontalSpacer_129">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="areaMasterySpinMin">
                         <property name="suffix">
                          <string/>
                         </property>
@@ -1272,7 +1539,20 @@
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="singleMasterySpinMax">
+                       <widget class="QLabel" name="label_31">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="areaMasterySpinMax">
                         <property name="suffix">
                          <string/>
                         </property>
@@ -1287,10 +1567,139 @@
                      </layout>
                     </widget>
                    </item>
+                   <item row="1" column="0">
+                    <widget class="QGroupBox" name="criticalMasteryBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_32">
+                      <item>
+                       <widget class="QLabel" name="criticalMasteryIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/crit_mastery.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="criticalMasteryLabel">
+                        <property name="text">
+                         <string>Maîtrise Critique</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_125">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>30</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="criticalMasterySpinMin">
+                        <property name="suffix">
+                         <string/>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_27">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="criticalMasterySpinMax">
+                        <property name="suffix">
+                         <string/>
+                        </property>
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                        <property name="singleStep">
+                         <number>1</number>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <spacer name="horizontalSpacer_93">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="3" column="1">
+                    <spacer name="horizontalSpacer_94">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_92">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
                   </layout>
                  </widget>
                 </item>
-                <item row="2" column="0">
+                <item row="3" column="1">
                  <widget class="QGroupBox" name="masteryBox">
                   <property name="minimumSize">
                    <size>
@@ -1329,9 +1738,12 @@
                         <property name="orientation">
                          <enum>Qt::Horizontal</enum>
                         </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
                         <property name="sizeHint" stdset="0">
                          <size>
-                          <width>40</width>
+                          <width>20</width>
                           <height>20</height>
                          </size>
                         </property>
@@ -1355,6 +1767,13 @@
                        </widget>
                       </item>
                       <item>
+                       <widget class="QLabel" name="label_15">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
                        <widget class="QLabel" name="waterMasteryIcon_2">
                         <property name="text">
                          <string/>
@@ -1370,6 +1789,22 @@
                          <number>99999</number>
                         </property>
                        </widget>
+                      </item>
+                      <item>
+                       <spacer name="waterSpacer_18">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <widget class="QLabel" name="waterBlockIcon">
@@ -1395,6 +1830,19 @@
                         </property>
                         <property name="maximum">
                          <number>2064</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_13">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1455,9 +1903,12 @@
                         <property name="orientation">
                          <enum>Qt::Horizontal</enum>
                         </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
                         <property name="sizeHint" stdset="0">
                          <size>
-                          <width>40</width>
+                          <width>20</width>
                           <height>20</height>
                          </size>
                         </property>
@@ -1481,6 +1932,13 @@
                        </widget>
                       </item>
                       <item>
+                       <widget class="QLabel" name="label_18">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
                        <widget class="QLabel" name="windMasteryIcon_2">
                         <property name="text">
                          <string/>
@@ -1496,6 +1954,22 @@
                          <number>99999</number>
                         </property>
                        </widget>
+                      </item>
+                      <item>
+                       <spacer name="waterSpacer_19">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <widget class="QLabel" name="windBlockIcon">
@@ -1521,6 +1995,19 @@
                         </property>
                         <property name="maximum">
                          <number>2064</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_12">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1554,133 +2041,7 @@
                      </layout>
                     </widget>
                    </item>
-                   <item row="0" column="1">
-                    <widget class="QGroupBox" name="earthBox">
-                     <property name="minimumSize">
-                      <size>
-                       <width>224</width>
-                       <height>48</height>
-                      </size>
-                     </property>
-                     <property name="title">
-                      <string/>
-                     </property>
-                     <layout class="QHBoxLayout" name="horizontalLayout_5">
-                      <item>
-                       <widget class="QLabel" name="earthIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/earth.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <spacer name="earthSpacer">
-                        <property name="orientation">
-                         <enum>Qt::Horizontal</enum>
-                        </property>
-                        <property name="sizeHint" stdset="0">
-                         <size>
-                          <width>40</width>
-                          <height>20</height>
-                         </size>
-                        </property>
-                       </spacer>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthMasteryIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mastery.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="earthMasterySpinMin">
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthMasteryIcon_2">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mastery.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="earthMasterySpinMax">
-                        <property name="maximum">
-                         <number>99999</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthBlockIcon">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthBlockPercentMin">
-                        <property name="text">
-                         <string>0%</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="earthBlockSpinMin">
-                        <property name="minimum">
-                         <number>-309</number>
-                        </property>
-                        <property name="maximum">
-                         <number>2064</number>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthBlockIcon_2">
-                        <property name="text">
-                         <string/>
-                        </property>
-                        <property name="pixmap">
-                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QLabel" name="earthBlockPercentMax">
-                        <property name="text">
-                         <string>0%</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QSpinBox" name="earthBlockSpinMax">
-                        <property name="minimum">
-                         <number>-309</number>
-                        </property>
-                        <property name="maximum">
-                         <number>2064</number>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
-                    </widget>
-                   </item>
-                   <item row="1" column="1">
+                   <item row="1" column="2">
                     <widget class="QGroupBox" name="fireBox">
                      <property name="minimumSize">
                       <size>
@@ -1707,9 +2068,12 @@
                         <property name="orientation">
                          <enum>Qt::Horizontal</enum>
                         </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
                         <property name="sizeHint" stdset="0">
                          <size>
-                          <width>40</width>
+                          <width>20</width>
                           <height>20</height>
                          </size>
                         </property>
@@ -1733,6 +2097,13 @@
                        </widget>
                       </item>
                       <item>
+                       <widget class="QLabel" name="label_11">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
                        <widget class="QLabel" name="fireMasteryIcon_2">
                         <property name="text">
                          <string/>
@@ -1748,6 +2119,22 @@
                          <number>99999</number>
                         </property>
                        </widget>
+                      </item>
+                      <item>
+                       <spacer name="waterSpacer_20">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
                       </item>
                       <item>
                        <widget class="QLabel" name="fireBlockIcon">
@@ -1773,6 +2160,19 @@
                         </property>
                         <property name="maximum">
                          <number>2064</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_10">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
                         </property>
                        </widget>
                       </item>
@@ -1806,8 +2206,751 @@
                      </layout>
                     </widget>
                    </item>
+                   <item row="0" column="2">
+                    <widget class="QGroupBox" name="earthBox">
+                     <property name="minimumSize">
+                      <size>
+                       <width>224</width>
+                       <height>48</height>
+                      </size>
+                     </property>
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_5">
+                      <item>
+                       <widget class="QLabel" name="earthIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/earth.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="earthSpacer">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthMasteryIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mastery.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="earthMasterySpinMin">
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_8">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthMasteryIcon_2">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mastery.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="earthMasterySpinMax">
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="waterSpacer_21">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeType">
+                         <enum>QSizePolicy::Fixed</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>20</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthBlockIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthBlockPercentMin">
+                        <property name="text">
+                         <string>0%</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="earthBlockSpinMin">
+                        <property name="minimum">
+                         <number>-309</number>
+                        </property>
+                        <property name="maximum">
+                         <number>2064</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_9">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthBlockIcon_2">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/block.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="earthBlockPercentMax">
+                        <property name="text">
+                         <string>0%</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="earthBlockSpinMax">
+                        <property name="minimum">
+                         <number>-309</number>
+                        </property>
+                        <property name="maximum">
+                         <number>2064</number>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <spacer name="horizontalSpacer_106">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_104">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>80</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
                   </layout>
                  </widget>
+                </item>
+                <item row="7" column="2">
+                 <spacer name="horizontalSpacer_131">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="7" column="0">
+                 <spacer name="horizontalSpacer_132">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="5" column="0">
+                 <spacer name="horizontalSpacer_133">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0">
+                 <spacer name="horizontalSpacer_138">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="1">
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="0">
+                 <spacer name="horizontalSpacer_137">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="2">
+                 <spacer name="horizontalSpacer_135">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="2">
+                 <spacer name="horizontalSpacer_136">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="5" column="2">
+                 <spacer name="horizontalSpacer_134">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="1">
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QGroupBox" name="baseBox">
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <layout class="QHBoxLayout" name="horizontalLayout_10">
+                   <item>
+                    <widget class="QGroupBox" name="levelBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_20">
+                      <item>
+                       <spacer name="horizontalSpacer_2">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="levelLabel">
+                        <property name="text">
+                         <string>Niveau</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="levelSpinMin">
+                        <property name="minimum">
+                         <number>1</number>
+                        </property>
+                        <property name="maximum">
+                         <number>40</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_3">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="levelSpinMax">
+                        <property name="minimum">
+                         <number>1</number>
+                        </property>
+                        <property name="maximum">
+                         <number>40</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_3">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_114">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="hpBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_11">
+                      <item>
+                       <spacer name="horizontalSpacer_4">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="hpIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/hp.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="hpLabel">
+                        <property name="text">
+                         <string>Vie</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="hpSpinMin">
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="hpSpinMax">
+                        <property name="maximum">
+                         <number>99999</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_5">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_111">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="paBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_12">
+                      <item>
+                       <spacer name="horizontalSpacer_6">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="paIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/ap.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="paLabel">
+                        <property name="text">
+                         <string>PA</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="paSpinMin">
+                        <property name="maximum">
+                         <number>99</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_4">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="paSpinMax">
+                        <property name="maximum">
+                         <number>99</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_7">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_112">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="pmBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_13">
+                      <item>
+                       <spacer name="horizontalSpacer_8">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="pmIcon">
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="pixmap">
+                         <pixmap resource="../icons.qrc">:/assets/icons/skills/mp.png</pixmap>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="pmLabel">
+                        <property name="text">
+                         <string>PM</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="pmSpinMin"/>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_5">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="pmSpinMax"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_9">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_113">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QGroupBox" name="pcBox">
+                     <property name="title">
+                      <string/>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_14">
+                      <item>
+                       <spacer name="horizontalSpacer_10">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="pcIcon">
+                        <property name="text">
+                         <string>TextLabel</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="pcLabel">
+                        <property name="text">
+                         <string>PC</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="pcSpinMin"/>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_7">
+                        <property name="text">
+                         <string>-</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="pcSpinMax"/>
+                      </item>
+                      <item>
+                       <spacer name="horizontalSpacer_11">
+                        <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                        </property>
+                        <property name="sizeHint" stdset="0">
+                         <size>
+                          <width>40</width>
+                          <height>20</height>
+                         </size>
+                        </property>
+                       </spacer>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </widget>
@@ -3885,30 +5028,13 @@
       </widget>
       <widget class="QWidget" name="createBattlepage">
        <layout class="QGridLayout" name="gridLayout_11">
-        <item row="5" column="1" colspan="2">
+        <item row="5" column="2" colspan="2">
          <widget class="QSpinBox" name="monsterNumberSpin">
           <property name="minimum">
            <number>1</number>
           </property>
           <property name="maximum">
            <number>8</number>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="0">
-         <widget class="QLabel" name="BattleLevelLabel">
-          <property name="text">
-           <string>Niveau du combat</string>
-          </property>
-         </widget>
-        </item>
-        <item row="4" column="1" colspan="2">
-         <widget class="QSpinBox" name="battleLevelSpin">
-          <property name="minimum">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <number>40</number>
           </property>
          </widget>
         </item>
@@ -3919,34 +5045,31 @@
           </property>
          </widget>
         </item>
-        <item row="0" column="2">
-         <widget class="QSpinBox" name="widthSpin">
-          <property name="minimum">
-           <number>5</number>
-          </property>
-          <property name="maximum">
-           <number>30</number>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QSpinBox" name="lengthSpin">
-          <property name="minimum">
-           <number>5</number>
-          </property>
-          <property name="maximum">
-           <number>30</number>
-          </property>
-         </widget>
-        </item>
-        <item row="5" column="0">
-         <widget class="QLabel" name="monsterNumberLabel">
+        <item row="10" column="0">
+         <widget class="QPushButton" name="manageButton">
           <property name="text">
-           <string>Nombre de monstres</string>
+           <string>Gérer les ensembles</string>
           </property>
          </widget>
         </item>
-        <item row="9" column="3">
+        <item row="4" column="2" colspan="2">
+         <widget class="QSpinBox" name="battleLevelSpin">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>40</number>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="BattleLevelLabel">
+          <property name="text">
+           <string>Niveau du combat</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="4">
          <spacer name="horizontalSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -3959,7 +5082,14 @@
           </property>
          </spacer>
         </item>
-        <item row="0" column="3">
+        <item row="5" column="0">
+         <widget class="QLabel" name="monsterNumberLabel">
+          <property name="text">
+           <string>Nombre de monstres</string>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="4">
          <spacer name="battlePageSpacer">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -3972,30 +5102,6 @@
           </property>
          </spacer>
         </item>
-        <item row="9" column="0">
-         <widget class="QPushButton" name="manageButton">
-          <property name="text">
-           <string>Gérer les ensembles</string>
-          </property>
-         </widget>
-        </item>
-        <item row="9" column="1" colspan="2">
-         <widget class="QPushButton" name="generateButton">
-          <property name="text">
-           <string>Lancer la génération</string>
-          </property>
-         </widget>
-        </item>
-        <item row="3" column="1" colspan="2">
-         <widget class="QSpinBox" name="groupBox">
-          <property name="minimum">
-           <number>1</number>
-          </property>
-          <property name="maximum">
-           <number>30</number>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="sizeLabel">
           <property name="text">
@@ -4003,7 +5109,7 @@
           </property>
          </widget>
         </item>
-        <item row="9" column="4">
+        <item row="10" column="5">
          <widget class="QPushButton" name="homepageButton_2">
           <property name="text">
            <string>Menu principal</string>
@@ -4017,7 +5123,30 @@
           </property>
          </widget>
         </item>
-        <item row="3" column="3" rowspan="6">
+        <item row="3" column="2" colspan="2">
+         <widget class="QSpinBox" name="groupBox">
+          <property name="minimum">
+           <number>1</number>
+          </property>
+          <property name="maximum">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+        <item row="6" column="2" colspan="2">
+         <widget class="QComboBox" name="monsterTypeBox"/>
+        </item>
+        <item row="0" column="3">
+         <widget class="QSpinBox" name="lengthSpin">
+          <property name="minimum">
+           <number>5</number>
+          </property>
+          <property name="maximum">
+           <number>30</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4" rowspan="7">
          <widget class="QTableWidget" name="mapTableWidget">
           <property name="enabled">
            <bool>true</bool>
@@ -4051,10 +5180,24 @@
           </attribute>
          </widget>
         </item>
-        <item row="6" column="1" colspan="2">
-         <widget class="QComboBox" name="monsterTypeBox"/>
+        <item row="0" column="2">
+         <widget class="QSpinBox" name="widthSpin">
+          <property name="minimum">
+           <number>5</number>
+          </property>
+          <property name="maximum">
+           <number>30</number>
+          </property>
+         </widget>
         </item>
-        <item row="10" column="1" colspan="2">
+        <item row="7" column="2" colspan="2">
+         <widget class="QPushButton" name="generateButton">
+          <property name="text">
+           <string>Lancer la génération</string>
+          </property>
+         </widget>
+        </item>
+        <item row="10" column="2" colspan="2">
          <widget class="QPushButton" name="exportButton">
           <property name="enabled">
            <bool>false</bool>
@@ -4075,7 +5218,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1167</width>
+     <width>1369</width>
      <height>20</height>
     </rect>
    </property>

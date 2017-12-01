@@ -83,7 +83,9 @@ void Map::setWidth(int value)
 /** Fin accesseurs **/
 
 void Map::placeGroups(int nbGroups) {
-	for (int k=0; k<nbGroups; k++) {
+	int usedCells = 0;
+
+	for (int k = 0; k < nbGroups && usedCells <= 3* length * width / 4 - 15; k++) {
 		if (!groups.empty()) {
 			Group *ng = groups[rand() % groups.size()];
 			int i = 0;
@@ -99,10 +101,11 @@ void Map::placeGroups(int nbGroups) {
 
 						grid[cell->getX()][cell->getY()] = cell;
 					}
+					usedCells += ng->getCellVector().size();
 					break;
 				}
 
-			} while (i<length*width/2);
+			} while (i < (int) (length * width / ng->getCellVector().size()));
 		}
     }
 }

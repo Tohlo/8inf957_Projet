@@ -188,29 +188,13 @@ std::vector<Mob *> MainWindow::deserializeMobs(QString type, int level)
 
 /** Confirmations de changements **/
 void MainWindow::confirmHomepage() {
-	int reponse = QMessageBox::question(this, "Annulation", "Retourner au menu principal ?", QMessageBox::Yes | QMessageBox::No);
+	ui->stackedWidget->setCurrentWidget(ui->homepage);
 
-	if (reponse == QMessageBox::Yes)
-	{
-		ui->stackedWidget->setCurrentWidget(ui->homepage);
-
-		reset();
-	}
-	else if (reponse == QMessageBox::No)
-	{
-	}
+	reset();
 }
 
 void MainWindow::confirmCloseApplication() {
-	int reponse = QMessageBox::question(this, "Fin", "Etes-vous sûr(e) de vouloir quitter ?", QMessageBox::Yes | QMessageBox::No);
-
-	if (reponse == QMessageBox::Yes)
-	{
-		close();
-	}
-	else if (reponse == QMessageBox::No)
-	{
-	}
+	close();
 }
 /** Fin confirmations de changements **/
 
